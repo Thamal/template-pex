@@ -1,0 +1,10 @@
+@use "src/scss/01-includes/colors";
+
+:root {
+  /* Colors */
+  @each $color, $shades in $customcolors {
+    @each $shade, $value in $shades {
+      --clr-#{$color}-#{$shade}: #{$value};
+    }
+  }
+}
